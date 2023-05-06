@@ -1,0 +1,100 @@
+{
+    "users": [
+        [
+            1,
+            "gerard.mathews@unsw.edu.au",
+            "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",
+            "gerard",
+            "mathews",
+            "gerardmathews",
+            "http://localhost:8080//imgurl/0.jpg",
+            {
+                "reset_code": 0,
+                "expiry_date": 1650297995.0
+            },
+            []
+        ]
+    ],
+    "channels": [],
+    "standups": [],
+    "messages": [
+        []
+    ],
+    "dm_messages": [
+        []
+    ],
+    "dms": [],
+    "message_counter": 0,
+    "register_counter": 1,
+    "global_owner": [
+        1
+    ],
+    "removed_users": [],
+    "removed_emails": [],
+    "removed_handles": [],
+    "sessions": [
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjEsInV1aWQiOiJmMGM2YmYzNC1mYzM5LTQ2MGMtYTM5NC0wZWI1MTc3Y2U0MjEifQ.KQfbQaYNRYjcFqyCUFHpN5-PdJanB0k_79yHq5-JRvc",
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjEsInV1aWQiOiIxZDAzOTdiYi04NjhhLTQwZTYtOWQ0NS0xZWE3YWJjMTljY2UifQ.1ohNfKkVcX2JdLeJTDn9H7C52fFPfBFZoZgqXRrqZYg"
+    ],
+    "messages_later": [],
+    "channel_track": [
+        {
+            "auth_user_id": 1,
+            "channels_joined": [
+                {
+                    "num_channels_joined": 0,
+                    "time_stamp": 1650297995
+                }
+            ]
+        }
+    ],
+    "dm_track": [
+        {
+            "auth_user_id": 1,
+            "dms_joined": [
+                {
+                    "num_dms_joined": 0,
+                    "time_stamp": 1650297995
+                }
+            ]
+        }
+    ],
+    "message_track": [
+        {
+            "auth_user_id": 1,
+            "messages_sent": [
+                {
+                    "num_messages_sent": 0,
+                    "time_stamp": 1650297995
+                }
+            ]
+        }
+    ],
+    "channels_exist": [
+        {
+            "num_channels_exist": 0,
+            "time_stamp": 1650297995
+        }
+    ],
+    "dms_exist": [
+        {
+            "num_dms_exist": 0,
+            "time_stamp": 1650297995
+        }
+    ],
+    "messages_exist": [
+        {
+            "num_messages_exist": 0,
+            "time_stamp": 1650297995
+        }
+    ],
+    "valid_reacts": [
+        1
+    ],
+    "wordle_ch": [
+        []
+    ],
+    "wordle_dm": [
+        []
+    ]
+}

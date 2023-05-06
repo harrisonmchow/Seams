@@ -1,0 +1,245 @@
+
+#Add jp
+POST http://127.0.0.1:8080/channel/invite/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "JP",
+    "channel_id" : "1",
+    "u_id" : "2"
+}
+###
+
+DELETE http://127.0.0.1:8080/clear/v1 HTTP/1.1
+Content-Type: application/json
+###
+
+GET http://127.0.0.1:8080/echo HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8080/channel/details/v2?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4&channel_id=1 HTTP/1.1
+Content-Type: application/json
+
+#{
+#    "token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4",
+#   "channel_id" : "1"
+#}
+###
+
+POST http://localhost:8080/auth/register/v2 HTTP/1.1
+content-type: application/json
+
+{
+    "email": "john.smith@unsw.edu.au",
+    "password": "password",
+    "name_first": "John", 
+    "name_last": "Smith"
+}
+###
+
+POST http://localhost:8080/auth/login/v2 HTTP/1.1
+content-type: application/json
+
+{
+    "email": "john.smith@unsw.edu.au",
+    "password": "password"
+}
+###
+
+POST http://localhost:8080/channels/create/v2 HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4",
+    "name": "Badger Channel",
+    "is_public": "True"
+}
+###
+
+POST http://localhost:8080/message/send/v1 HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4",
+    "channel_id": 1,
+    "message": "message"
+}
+###
+
+GET http://localhost:8080/channel/messages/v2 HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4",
+    "channel_id": 1,
+    "start": 100
+}
+###
+#__________________________________________________________________
+
+###
+DELETE http://127.0.0.1:8080/clear/v1 HTTP/1.1
+Content-Type: application/json
+###
+
+###
+
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "a@gmail.com",
+    "password" : "password",
+    "name_first" : "adminf",
+    "name_last" : "adminl"
+}
+
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test1@gmail.com",
+    "password" : "password",
+    "name_first" : "J",
+    "name_last" : "P"
+}
+###
+POST http://127.0.0.1:8080/auth/login/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test1@gmail.com",
+    "password" : "password"
+}
+###
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test2@gmail.com",
+    "password" : "password",
+    "name_first" : "JJ",
+    "name_last" : "P"
+}
+###
+POST http://127.0.0.1:8080/auth/login/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test2@gmail.com",
+    "password" : "password"
+}
+###
+
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test3@gmail.com",
+    "password" : "password",
+    "name_first" : "JJ",
+    "name_last" : "P"
+}
+###
+###
+POST http://127.0.0.1:8080/auth/login/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test3@gmail.com",
+    "password" : "password"
+}
+###
+
+###
+POST http://127.0.0.1:8080/auth/logout/v1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjEsInV1aWQiOiJlOTAzYjFkOS1kYzdjLTRiMmYtOTM4OC02NTIzN2MxNGYyNTcifQ.ZvgL3p9l67CPC2gz0QGXBLKcmFh6-ZjailgZnwdKRnY"
+}
+###
+
+DELETE http://127.0.0.1:8080/admin/user/remove/v1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4",
+    "u_id" : 2
+}
+###
+
+DELETE http://127.0.0.1:8080/admin/user/remove/v1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjJ9.K62ntIszXBSFVJeldXdqROHWAzmVyW-gR_GzjiCUH20",
+    "u_id" : 1
+}
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test5@gmail.com",
+    "password" : "password",
+    "name_first" : "more",
+    "name_last" : "peeps"
+}
+###
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test2@gmail.com",
+    "password" : "password",
+    "name_first" : "JJ",
+    "name_last" : "P"
+}
+###
+###
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test10@gmail.com",
+    "password" : "password",
+    "name_first" : "JJqwd",
+    "name_last" : "asdasP"
+}
+###
+
+GET http://127.0.0.1:8080/users/all/v1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjF9.QFbihLfYE7kOfGce83mG6rYaFYDcEPex0O1LE_LnLu4"
+}
+###
+
+GET http://127.0.0.1:8080/user/profile/v1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdXRoX3VzZXJfaWQiOjEsInV1aWQiOiIxODkwMTczMS0wMjk1LTQ0NWQtYmFhMS0wMTAxNTI1YWJkM2EifQ.9452ROCCAWADoj9LLWedkHQqN-KWiIQWh28_PsNgQVk&u_id=1 HTTP/1.1
+Content-Type: application/json
+
+###
+DELETE http://127.0.0.1:8080/clear/v1 HTTP/1.1
+Content-Type: application/json
+###
+
+###
+
+POST http://127.0.0.1:8080/auth/register/v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "email" : "test1@gmail.com",
+    "password" : "password",
+    "name_first" : "J",
+    "name_last" : "P"
+}
+###
